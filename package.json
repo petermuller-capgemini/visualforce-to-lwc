@@ -36,6 +36,7 @@
             "prettier --write"
         ],
         "**/lwc/**/*.js": [
+            "sf code-analyzer run",
             "eslint"
         ],
         "**/lwc/**": [
