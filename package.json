@@ -28,19 +28,19 @@
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prepare": "husky || true",
-        "precommit": "lint-staged --debug"
+        "precommit": "lint-staged"
     },
     "lint-staged": {
         "force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
             "prettier --write",
-            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --target"
+            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --workspace ./force-app --severity-threshold 3 --target"
         ],
         "force-app/**/lwc/**/*.js": [
-            "sf code-analyzer run"
+            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --workspace ./force-app --severity-threshold 3 --target"
         ],
         "force-app/**/lwc/**": [
             "sfdx-lwc-jest -- --bail --findRelatedTests",
-            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --target"
+            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --workspace ./force-app --severity-threshold 3 --target"
         ]
     },
     "repository": {

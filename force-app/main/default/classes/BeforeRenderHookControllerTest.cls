@@ -1,7 +1,7 @@
 @isTest
 private class BeforeRenderHookControllerTest {
-    @isTest(SeeAllData=true)
-    static void populateCourses_sets3Courses() {
+    @isTest
+    static void populateCoursesSetsCourses() {
         // GIVEN
         BeforeRenderHookController controller = new BeforeRenderHookController();
 
