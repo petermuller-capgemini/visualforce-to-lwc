@@ -1,4 +1,4 @@
-public with sharing class BeforeRenderHookController {
+public without sharing class BeforeRenderHookController {
     public List<String> courses { get; private set; }
 
     public void populateCourses() {
