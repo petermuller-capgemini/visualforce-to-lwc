@@ -33,14 +33,14 @@
     "lint-staged": {
         "force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
             "prettier --write",
-            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --workspace ./force-app --severity-threshold 3 --target"
+            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --output-file results/result.xml --output-file results/result.json --output-file results/result.sarif --workspace ./force-app --severity-threshold 3 --target"
         ],
         "force-app/**/lwc/**/*.js": [
-            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --workspace ./force-app --severity-threshold 3 --target"
+            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --output-file results/result.xml --output-file results/result.json --output-file results/result.sarif --workspace ./force-app --severity-threshold 3 --target"
         ],
         "force-app/**/lwc/**": [
             "sfdx-lwc-jest -- --bail --findRelatedTests",
-            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --workspace ./force-app --severity-threshold 3 --target"
+            "sf code-analyzer run --output-file results/result.html --output-file results/result.csv --output-file results/result.xml --output-file results/result.json --output-file results/result.sarif --workspace ./force-app --severity-threshold 3 --target"
         ]
     },
     "repository": {
