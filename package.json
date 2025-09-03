@@ -19,6 +19,7 @@
         "prettier-plugin-apex": "2.2.6"
     },
     "scripts": {
+        "check:versions": "echo \"\n\nChecking Node version\" && node -v && echo \"\n\nChecking Java Version\" && java -version && echo \"\n\nChecking Salesforce CLI Version\" && sf --version && echo \"\n\nChecking Python Version\" && python3 -V",
         "lint": "eslint **/lwc/**/*.js",
         "test": "npm run test:unit",
         "test:unit": "sfdx-lwc-jest",
